@@ -4,6 +4,12 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.1</Version>
+    <Authors />
+    <Company />
+    <Product />
+    <PackageProjectUrl>https://github.com/coding-tired/LandXMLParser</PackageProjectUrl>
+    <PackageId>LandXML</PackageId>
+    <Description>Simple LandXML Parser</Description>
   </PropertyGroup>
 
 </Project>
