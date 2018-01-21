@@ -119,7 +119,6 @@ namespace Xml2CSharp
     {
         [XmlAttribute(AttributeName = "code")]
         public string Code { get; set; }
-        [XmlAttribute(AttributeName = "m")]
         [XmlAttribute(AttributeName = "desc")]
         public string Desc { get; set; }
         [XmlAttribute(AttributeName = "m")]
