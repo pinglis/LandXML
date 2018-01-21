@@ -117,6 +117,9 @@ namespace Xml2CSharp
     [XmlRoot(ElementName = "CgPoint")]
     public class CgPoint
     {
+        [XmlAttribute(AttributeName = "code")]
+        public string Code { get; set; }
+        [XmlAttribute(AttributeName = "m")]
         [XmlAttribute(AttributeName = "desc")]
         public string Desc { get; set; }
         [XmlAttribute(AttributeName = "m")]
@@ -652,9 +655,38 @@ namespace Xml2CSharp
     public class Surfaces
     {
         [XmlElement(ElementName = "Surface")]
-        public Surface Surface { get; set; }
+        public List<Surface> Surface { get; set; }
+        [XmlElement(ElementName = "SurfVolumes")]
+        public SurfVolumes SurfVolumes { get; set; }
     }
 
+    [XmlRoot(ElementName = "SurfVolume", Namespace = "http://www.landxml.org/schema/LandXML-1.1")]
+    public class SurfVolume
+    {
+        [XmlAttribute(AttributeName = "desc")]
+        public string Desc { get; set; }
+        [XmlAttribute(AttributeName = "name")]
+        public string Name { get; set; }
+        [XmlAttribute(AttributeName = "surfBase")]
+        public string SurfBase { get; set; }
+        [XmlAttribute(AttributeName = "surfCompare")]
+        public string SurfCompare { get; set; }
+        [XmlAttribute(AttributeName = "volCut")]
+        public string VolCut { get; set; }
+        [XmlAttribute(AttributeName = "volFill")]
+        public string VolFill { get; set; }
+        [XmlAttribute(AttributeName = "volTotal")]
+        public string VolTotal { get; set; }
+    }
+
+    [XmlRoot(ElementName = "SurfVolumes")]
+    public class SurfVolumes
+    {
+        [XmlAttribute(AttributeName = "surfVolCalcMethod")]
+        public string SurfVolCalcMethod { get; set; }
+        [XmlElement(ElementName = "SurfVolume")]
+        public SurfVolume SurfVolume { get; set; }
+    }
     [XmlRoot(ElementName = "Symbol")]
     public class Symbol
     {
